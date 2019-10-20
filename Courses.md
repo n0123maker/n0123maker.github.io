@@ -28,10 +28,12 @@ http://web.stanford.edu/class/cs246/
 
 ## Introduction to Mobile Robotics, UNI Freiburg
 http://ais.informatik.uni-freiburg.de/teaching/ss19/robotics/index_en.php
+
 Textbook: Probabilistic Robotics (2005)
 
 ## Robot Mapping, UNI Freiburg
 http://ais.informatik.uni-freiburg.de/teaching/ws19/mapping/
+
 Textbook: Probabilistic Robotics (2005)
 
 ## Textbooks
