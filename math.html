@@ -10,9 +10,22 @@
   </script>
 </head>
 <body>
-<p>
-  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
-</p>
+  
+  <h1>Taylor Series</h1>
+  <p>
+\begin{align}
+f(x) & = \sum_{n=0}^\infty {\frac{{f^{(n)}}(a)}{n!}{{({x-a})}^n}} \\ 
+& = f(a) + f'(a)({x-a}) + \frac{{f''(a)}}{2!}{({x-a})^2} + \frac{{f'''(a)}}{3!}{({x-a})^3} + \cdots 
+\end{align}
+  </p>
+  
+  <h1>Maclaurin Series</h1>
+  <p>
+\begin{align}
+f(x) & = \sum_{n=0}^\infty {\frac{{f^{(n)}}(0)}{n!}{x^n}} \\ 
+& = f(0) + f'(0)x + \frac{{f''(0)}}{2!}{x^2} + \frac{{f'''(0)}}{3!}{x^3} + \cdots 
+\end{align}
+  </p>
+  
 </body>
 </html>
