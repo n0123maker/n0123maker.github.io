@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>ThreeJS_3D_Image</title>
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+   
+    <script src="three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="stats.min.js"></script>
+
+    <script>
+        
+		var container, stats;
+		var camera, scene, renderer;
+		
+        init();
+		animate();
+
+        function init() {
+		
+			renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			scene = new THREE.Scene();
+			camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 );				
+			var controls = new THREE.OrbitControls( camera, renderer.domElement );
+			
+			camera.position.set( 20, 20, 20 );
+			controls.update();
+			
+			camera.lookAt( 0, 0, 0 );
+			
+			/////////////////////////////////////
+			// PlaneGeometry
+			
+			var geometry1 = new THREE.PlaneGeometry( 10, 10, 32 );
+			var material1 = new THREE.MeshBasicMaterial( {color: 0x0000ff, side: THREE.DoubleSide} );
+			var plane1 = new THREE.Mesh( geometry1, material1 );
+			scene.add( plane1 );
+			
+			var geometry2 = new THREE.PlaneGeometry( 10, 10, 32 );
+			var material2 = new THREE.MeshBasicMaterial( {color: 0xff0000, side: THREE.DoubleSide} );
+			var plane2 = new THREE.Mesh( geometry2, material2 );
+			plane2.rotation.set(Math.PI / 2.0, 0, 0);
+			scene.add( plane2 );
+			
+			var geometry3 = new THREE.PlaneGeometry( 10, 10, 32 );
+			var material3 = new THREE.MeshBasicMaterial( {color: 0x00ff00, side: THREE.DoubleSide} );
+			var plane3 = new THREE.Mesh( geometry3, material3 );
+			plane3.rotation.set(0, Math.PI / 2.0, 0);
+			scene.add( plane3 );
+		
+			////////////////////////////////////
+			// WireframeGeometry
+			
+			var geometry = new THREE.SphereBufferGeometry( 10, 50, 50 );
+
+			var wireframe = new THREE.WireframeGeometry( geometry );
+
+			var line = new THREE.LineSegments( wireframe );
+			line.material.depthTest = true;
+			line.material.opacity = 0.5;
+			line.material.transparent = true;
+
+			scene.add( line );
+
+			stats = new Stats();			
+        }
+		
+		function animate() {
+			requestAnimationFrame( animate );
+			stats.update();
+			// required if controls.enableDamping or controls.autoRotate are set to true
+			//controls.update();
+			renderer.render( scene, camera );
+		}
+		
+    </script>
+</body>
+</html>
