@@ -16,6 +16,7 @@ C:\altera\13.0sp1\quartus\drivers\usb-blaster
 
 # Resources
 
-* [FPGA designs with Verilog](https://verilogguide.readthedocs.io/en/latest/)
-* [NandLand](https://www.nandland.com/)
+* [FPGA designs with Verilog](https://verilogguide.readthedocs.io/en/latest)
+* [NandLand](https://www.nandland.com)
 * [NandLand YouTube](https://www.youtube.com/nandland)
+* [Time To Explore](https://timetoexplore.net)
