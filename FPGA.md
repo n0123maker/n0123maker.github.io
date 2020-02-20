@@ -38,7 +38,11 @@ Compilation stopped.
 ```
 I seems this involves an error due to an older version of Cygwin installed by the toolchain, described here: https://cygwin.com/faq.html#faq.using.fixing-find_fast_cwd-warnings.
 
-So let's download a recent [Cygwin Installer](https://cygwin.com/setup-x86_64.exe). I just go with all default settings while installing.
+We need to update the cygwin files in the quartus directory.
+The 32bit files are located at: ```C:\altera\13.0sp1\quartus\bin\cygwin```
+The 64bit files are located at: ```C:\altera\13.0sp1\quartus\bin64\cygwin```
+
+We could download a recent Cygwin Installer for both 32bit and 64bit, but I found a zipped patch [altera_quartus13.1_cygwin_patch.zip](http://help.ece.ubc.ca/Altera#Microsoft_Windows_8.2F8.1_Warning) which includes binaries for both architectures. After updating the Cygwin files compilation is successfull.
 
 # Resources
 * [FPGA designs with Verilog](https://verilogguide.readthedocs.io/en/latest)
