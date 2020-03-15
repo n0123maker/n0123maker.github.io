@@ -7,6 +7,9 @@
 * An efficient orientation filter for inertial and inertial/magnetic sensor arrays  
   _Sebastian O.H. Madgwick_  
   https://www.x-io.co.uk/res/doc/madgwick_internal_report.pdf
+* An Extended Kalman Filter for Quaternion-Based Orientation Estimation Using MARG Sensors  
+  _João Luís Marins, Xiaoping Yun, Eric R. Bachmann, Robert B. McGhee, and Michael J. Zyda_  
+  https://mikezyda.com/resources/pubs/IROS2001.pdf
 * Nonlinear Complementary Filters on the Special Orthogonal Group  
   _R. Mahony, Tarek Hamel, Jean-Michel Pflimlin_  
   https://hal.archives-ouvertes.fr/file/index/docid/488376/filename/2007_Mahony.etal_TAC-06-396_v3.pdf
