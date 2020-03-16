@@ -1,5 +1,8 @@
 # Course Material
 
+## MIT 6.S191: Introduction to Deep Learning
+http://introtodeeplearning.com/
+
 ## CS189/289A: Introduction to Machine Learning (Berkeley)
 https://people.eecs.berkeley.edu/~jrs/189/
 
